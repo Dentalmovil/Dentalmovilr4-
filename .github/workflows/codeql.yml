@@ -75,4 +75,3 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         categoría : "/idioma:${{matrix.idioma}}"
--ejecutar : dentalmovilr4 
