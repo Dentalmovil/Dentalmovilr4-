@@ -58,6 +58,17 @@ npx tailwindcss init -p
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
 
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 
 
 
