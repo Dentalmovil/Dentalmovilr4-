@@ -253,4 +253,27 @@ return (
     ))}
   </motion.div>
 );
+import { motion } from 'framer-motion';
+
+export default function Contacto() {
+  return (
+    <motion.div 
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: "spring", stiffness: 100 }}
+      className="max-w-md mx-auto"
+    >
+      <form className="space-y-4">
+        <h2 className="text-2xl font-bold">Contáctanos</h2>
+        {/* ... tus campos de input ... */}
+        <motion.button 
+          whileTap={{ scale: 0.9 }} // Efecto de "clic" físico
+          className="w-full bg-blue-600 text-white py-2 rounded-md"
+        >
+          Enviar Mensaje
+        </motion.button>
+      </form>
+    </motion.div>
+  );
+}
 
