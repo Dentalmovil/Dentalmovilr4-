@@ -73,6 +73,7 @@ export default {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+npm install react-router-dom
 
 
 
