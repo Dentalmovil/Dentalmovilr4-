@@ -229,4 +229,28 @@ export default function Contacto() {
   );
 }
 npm install framer-motion
+import { motion } from 'framer-motion';
+
+// ... (resto del código del fetch)
+
+return (
+  <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    className="grid grid-cols-2 md:grid-cols-4 gap-4"
+  >
+    {pokemonFiltrados.map((p, index) => (
+      <motion.div 
+        key={p.name}
+        initial={{ opacity: 0, y: 20 }} // Empieza abajo y transparente
+        animate={{ opacity: 1, y: 0 }}  // Sube y se hace visible
+        transition={{ delay: index * 0.05 }} // Efecto cascada
+        whileHover={{ scale: 1.05 }}      // Se agranda al pasar el mouse
+        className="p-4 bg-white rounded-lg shadow-sm border text-center"
+      >
+        <p className="font-medium capitalize">{p.name}</p>
+      </motion.div>
+    ))}
+  </motion.div>
+);
 
