@@ -44,6 +44,12 @@ jobs:
           folder: dist # O 'build' si usas Create React App en lugar de Vite
           branch: gh-pages # La rama donde se subirá el sitio listo
 
+      - name: Install and Build
+        run: npm run build
+        env:
+          # Aquí conectamos los secretos de GitHub con las variables que React necesita
+          VITE_FIREBASE_KEY: ${{ secrets.VITE_FIREBASE_KEY }}
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
 
 
