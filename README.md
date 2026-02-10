@@ -1,4 +1,4 @@
-#dentalmovilr4
+i#dentalmovilr4
 git push -u origin main
 
 touch index.html
@@ -76,5 +76,32 @@ export default {
 npm install react-router-dom
 
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+function Home() {
+  return <h1 className="text-3xl font-bold text-blue-600">🏠 Inicio</h1>;
+}
+
+function About() {
+  return <h1 className="text-3xl font-bold text-green-600">ℹ️ Sobre nosotros</h1>;
+}
+
+export default function App() {
+  return (
+    <Router>
+      <nav className="p-4 bg-gray-800 text-white flex gap-4">
+        <Link to="/" className="hover:text-blue-400">Inicio</Link>
+        <Link to="/about" className="hover:text-green-400">Acerca de</Link>
+      </nav>
+
+      <div className="p-8">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 
