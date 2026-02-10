@@ -104,4 +104,24 @@ export default function App() {
   );
 }
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/MainLayout';
+
+function Home() { return <h2 className="text-2xl font-bold">🏠 Bienvenida/o al Inicio</h2>; }
+function Profile() { return <h2 className="text-2xl font-bold">👤 Este es tu Perfil</h2>; }
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Ruta padre con el Layout */}
+        <Route path="/" element={<MainLayout />}>
+          {/* Rutas hijas */}
+          <Route index element={<Home />} /> {/* index significa que es la ruta base */}
+          <Route path="perfil" element={<Profile />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
+}
 
