@@ -228,4 +228,5 @@ export default function Contacto() {
     </form>
   );
 }
+npm install framer-motion
 
