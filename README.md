@@ -47,6 +47,12 @@ jobs:
       - name: Install and Build
         run: npm run build
         env:
+# Instala Tailwind y sus dependencias
+npm install -D tailwindcss postcss autoprefixer
+
+# Genera los archivos de configuración (tailwind.config.js y postcss.config.js)
+npx tailwindcss init -p
+
           # Aquí conectamos los secretos de GitHub con las variables que React necesita
           VITE_FIREBASE_KEY: ${{ secrets.VITE_FIREBASE_KEY }}
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
