@@ -11,6 +11,39 @@ git push -u origin main
 
 "homepage": "https://tu-usuario.github.io/tu-repo",
 
+name: Deploy React App
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # O 'build' si usas Create React App en lugar de Vite
+          branch: gh-pages # La rama donde se subirá el sitio listo
+
 
 
 
