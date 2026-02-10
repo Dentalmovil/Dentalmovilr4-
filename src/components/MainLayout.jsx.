@@ -1,0 +1,28 @@
+import { Link, Outlet } from 'react-router-dom';
+
+export default function MainLayout() {
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      {/* Navbar fija */}
+      <nav className="bg-white shadow-md p-4 flex justify-between items-center px-8">
+        <h1 className="text-xl font-bold text-blue-600">Mi App Pro</h1>
+        <div className="space-x-4">
+          <Link to="/" className="text-gray-600 hover:text-blue-500">Inicio</Link>
+          <Link to="/perfil" className="text-gray-600 hover:text-blue-500">Perfil</Link>
+        </div>
+      </nav>
+
+      {/* Contenido Dinámico */}
+      <main className="flex-grow p-6">
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-sm">
+          <Outlet /> {/* Aquí es donde se inyectarán las páginas */}
+        </div>
+      </main>
+
+      {/* Footer fijo */}
+      <footer className="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2026 - Hecho con React y Codespaces</p>
+      </footer>
+    </div>
+  );
+}
