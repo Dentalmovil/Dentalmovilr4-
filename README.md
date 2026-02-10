@@ -124,4 +124,49 @@ export default function App() {
     </Router>
   );
 }
+import { useState, useEffect } from 'react';
+
+export default function PokemonList() {
+  const [pokemons, setPokemons] = useState([]);
+  const [busqueda, setBusqueda] = useState(""); // Estado para el texto del buscador
+
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=100') // Pedimos más para que el filtro luzca
+      .then(res => res.json())
+      .then(data => setPokemons(data.results));
+  }, []);
+
+  // Lógica de filtrado
+  const pokemonFiltrados = pokemons.filter(p => 
+    p.name.toLowerCase().includes(busqueda.toLowerCase())
+  );
+
+  return (
+    <div className="space-y-6">
+      {/* Input de búsqueda con Tailwind */}
+      <div className="relative">
+        <input 
+          type="text"
+          placeholder="Buscar Pokémon..."
+          className="w-full p-3 pl-10 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none transition-all"
+          onChange={(e) => setBusqueda(e.target.value)}
+        />
+        <span className="absolute left-3 top-3.5 opacity-40">🔍</span>
+      </div>
+
+      {/* Grid de resultados */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {pokemonFiltrados.map((p) => (
+          <div key={p.name} className="p-4 bg-white rounded-lg shadow-sm border hover:border-blue-300 capitalize text-center">
+            <p className="font-medium text-gray-700">{p.name}</p>
+          </div>
+        ))}
+      </div>
+      
+      {pokemonFiltrados.length === 0 && (
+        <p className="text-center text-gray-500">No se encontraron resultados 😢</p>
+      )}
+    </div>
+  );
+}
 
