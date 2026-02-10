@@ -70,6 +70,9 @@ export default {
   plugins: [],
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 
