@@ -169,4 +169,63 @@ export default function PokemonList() {
     </div>
   );
 }
+import { useState } from 'react';
+
+export default function Contacto() {
+  const [datos, setDatos] = useState({ nombre: '', email: '', mensaje: '' });
+
+  const manejarCambio = (e) => {
+    setDatos({
+      ...datos, // Copiamos lo que ya había
+      [e.target.name]: e.target.value // Actualizamos solo el campo que cambió
+    });
+  };
+
+  const enviarFormulario = (e) => {
+    e.preventDefault();
+    console.log("Datos enviados:", datos);
+    alert(`¡Gracias ${datos.nombre}! Hemos recibido tu mensaje.`);
+  };
+
+  return (
+    <form onSubmit={enviarFormulario} className="space-y-4 max-w-md mx-auto">
+      <h2 className="text-2xl font-bold mb-4">Contáctanos</h2>
+      
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Nombre</label>
+        <input 
+          name="nombre" 
+          type="text" 
+          required
+          className="w-full p-2 border rounded-md" 
+          onChange={manejarCambio} 
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Email</label>
+        <input 
+          name="email" 
+          type="email" 
+          required
+          className="w-full p-2 border rounded-md" 
+          onChange={manejarCambio} 
+        />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Mensaje</label>
+        <textarea 
+          name="mensaje" 
+          className="w-full p-2 border rounded-md" 
+          onChange={manejarCambio}
+        ></textarea>
+      </div>
+
+      <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+        Enviar Mensaje
+      </button>
+    </form>
+  );
+}
 
