@@ -103,7 +103,7 @@ export default function App() {
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/MainLayout';
 
-function Home() { return <h2 className="text-2xl font-bold">🏠 Bienvenida/o al Inicio</h2>; }
+function Home() { return <h2 className="text-2xl font-bold">🏠Sobre el Proyecto</h2>; }En el vertiginoso mundo de las criptomonedas, la velocidad y la precisión son lo único que separa una oportunidad de una pérdida. Este proyecto surge para fusionar algoritmos avanzados con visión de mercado, permitiendo que las ventas y transacciones se ejecuten en el momento óptimo. Somos la herramienta para el inversor que busca eficiencia, liquidez y una ventaja competitiva en el ecosistema Web3.
 function Profile() { return <h2 className="text-2xl font-bold">👤 Este es tu Perfil</h2>; }
 
 export default function App() {
