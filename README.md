@@ -74,7 +74,7 @@ npm install react-router-dom
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function Home() {
-  return <h1 className="text-3xl font-bold text-blue-600">🏠 Inicio</h1>;
+  return <h1 className="text-3xl font-bold text-blue-600">🏠 "Sobre Nosotros"</h1>;
 }
 
 function About() {
