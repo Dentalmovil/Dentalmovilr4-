@@ -78,7 +78,7 @@ function Home() {
 }Somos un equipo de especialistas en tecnología blockchain y finanzas digitales convencidos de que el acceso a la nueva economía debe ser transparente y seguro. En un mercado saturado de complejidad, nuestra misión es simplificar el proceso de compra y venta de activos digitales, ofreciendo una infraestructura robusta y herramientas de análisis que permiten a nuestros usuarios operar con la tranquilidad que el capital merece.
 
 function About() {
-  return <h1 className="text-3xl font-bold text-green-600">ℹ️ Sobre nosotros</h1>;
+  return <h1 className="text-3xl font-bold text-green-600">ℹ️Nuestra Filosofía </h1>;
 }
 
 export default function App() {
