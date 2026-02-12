@@ -46,5 +46,5 @@ Visión 2030:
 ​Convertirnos en el puente principal de liquidez y educación financiera en el mercado de criptomonedas a nivel regional, liderando la transición hacia un sistema financiero más abierto, eficiente y sin fronteras.
 
 function Home() {
-  return <h1 className="text-3xl font-bold text-blue-600"​💎 Nuestros Valores Fundamentales
+  return <h1 className="text-3xl font-bold text-blue-600">🏠 "Quiénes Somos"</h1>;💎 Nuestros Valores Fundamentales
 
