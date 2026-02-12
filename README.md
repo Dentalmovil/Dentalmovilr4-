@@ -47,7 +47,9 @@ Visión 2030:
 
 function Home() {
   return <h1 className="text-3xl font-bold text-blue-600">💎 Nuestros Valores</h1>;Fundamentales
-Transparencia Radical: En el mundo cripto, la confianza se basa en datos, no en promesas. Operamos con total claridad en nuestras comisiones y procesos.
+
+Transparencia Radical: 
+En el mundo cripto, la confianza se basa en datos, no en promesas. Operamos con total claridad en nuestras comisiones y procesos.
 Seguridad Primero: Implementamos protocolos de última generación para proteger cada transacción. Si no es seguro, no es una opción para nosotros.
 Innovación Adaptativa: El mercado cambia en segundos; nosotros evolucionamos con él para ofrecer siempre las mejores oportunidades de venta y trading.
 Educación Continua: No solo vendemos activos, empoderamos a nuestros usuarios con el conocimiento necesario para tomar decisiones inteligentes.
