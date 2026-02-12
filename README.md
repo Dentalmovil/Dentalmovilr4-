@@ -4,7 +4,7 @@ git push -u origin main
 git push -u origin main
 git push -u origin main
 
-"homepage": "https://tu-dentalmovil.github.io/tu-Dentalmovilr4-",
+"homepage": "https://github.com/Dentalmovil
 
 name: Deploy React App
 
