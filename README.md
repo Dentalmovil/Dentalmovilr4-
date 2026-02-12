@@ -109,6 +109,7 @@ function Profile() { return <h2 className="text-2xl font-bold">🚀 Nuestra Iden
 ​Facilitar el acceso al ecosistema de activos digitales a través de una plataforma de venta segura, intuitiva y transparente. Nos dedicamos a derribar las barreras técnicas del mundo cripto, permitiendo que tanto individuos como empresas gestionen su capital en la nueva economía descentralizada con total confianza.
 
 Visión 2030:
+
 ​Convertirnos en el puente principal de liquidez y educación financiera en el mercado de criptomonedas a nivel regional, liderando la transición hacia un sistema financiero más abierto, eficiente y sin fronteras.
 
 export default function App() {
