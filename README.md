@@ -79,7 +79,7 @@ function Home() {
 
 function About() {
   return <h1 className="text-3xl font-bold text-green-600">ℹ️Nuestra Filosofía </h1>;
-}
+}El mercado cripto no debería ser un club exclusivo para expertos. Nacimos con el objetivo de democratizar las inversiones en activos digitales, eliminando las barreras técnicas y el lenguaje confuso. No solo vendemos soluciones de mercado; acompañamos a nuestra comunidad en su transición hacia la libertad financiera, proporcionando datos en tiempo real y estrategias probadas para navegar la volatilidad con inteligencia
 
 export default function App() {
   return (
