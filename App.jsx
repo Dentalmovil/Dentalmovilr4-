@@ -54,3 +54,4 @@ export default function App() {
     </div>
   );
 }
+npm install firebase
