@@ -1,0 +1,18 @@
+const Card = () => (
+  <div style={{
+    border: '1px solid #ddd',
+    borderRadius: '12px',
+    padding: '20px',
+    maxWidth: '300px',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    margin: '20px auto'
+  }}>
+    <img src="https://via.placeholder.com/150" alt="avatar" style={{ borderRadius: '50%' }} />
+    <h3>Desarrollador React</h3>
+    <p>Editando mi primer componente en la nube.</p>
+  </div>
+)
+
+export default function App() {
+  return <Card />
+}
