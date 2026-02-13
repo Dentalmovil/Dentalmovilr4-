@@ -55,3 +55,24 @@ export default function App() {
   );
 }
 npm install firebase
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyA-n6Ort4Funh_wQuKoi5UTlW96CTww6Ok",
+  authDomain: "miproyectoreact-96c94.firebaseapp.com",
+  projectId: "miproyectoreact-96c94",
+  storageBucket: "miproyectoreact-96c94.firebasestorage.app",
+  messagingSenderId: "268958305275",
+  appId: "1:268958305275:web:a80ae2044d77ce5b17595e",
+  measurementId: "G-21GKM3RXTL"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
