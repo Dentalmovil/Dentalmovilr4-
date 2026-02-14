@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>My Aesthetic Player 🎵</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="album-art">
+            <img src="https://via.placeholder.com/250" id="cover" alt="Cover">
+        </div>
+        
+        <div class="info">
+            <h2 id="title">Nombre de la Canción</h2>
+            <h3 id="artist">Artista</h3>
+        </div>
+
+        <audio id="audio" src="tu-archivo.mp3"></audio>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" class="action-btn">⏮</button>
+            <button id="play" class="action-btn main-btn">▶️</button>
+            <button id="next" class="action-btn">⏭</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
