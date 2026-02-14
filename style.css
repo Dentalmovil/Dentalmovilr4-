@@ -31,3 +31,20 @@
     50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.5); }
     100% { transform: rotate(360deg); box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
 }
+
+.progress-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px 0;
+    height: 6px;
+    width: 100%;
+}
+
+.progress {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; /* Empieza en cero */
+    transition: width 0.1s linear;
+}
