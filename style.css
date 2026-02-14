@@ -1,0 +1,28 @@
+/* Estilo base de la imagen */
+.album-art img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    /* La animación se define aquí pero empieza pausada */
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused; 
+}
+
+/* Cuando el contenedor tenga la clase 'play', el disco gira */
+.player-container.play .album-art img {
+    animation-play-state: running;
+}
+
+/* Definición del movimiento circular */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
