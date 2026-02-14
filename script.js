@@ -79,3 +79,21 @@ audio.addEventListener('ended', nextSong);
 
 // Cargar la primera canción al iniciar
 loadSong(songs[songIndex]);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-dev-firestore.js";
+
+const firebaseConfig = { /* TU CONFIGURACIÓN AQUÍ */ };
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+let songs = []; // Empezamos con la lista vacía
+let songIndex = 0;
+
+// 🚀 Traer canciones de Firebase en tiempo real
+onSnapshot(collection(db, "songs"), (snapshot) => {
+    songs = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    
+    if (songs.length > 0) {
+        loadSong(songs[songIndex]); // Carga la primera canción cuando lleguen los datos
+    }
+});
