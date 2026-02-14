@@ -48,3 +48,34 @@ const songs = [
 
 // Índice para saber qué canción suena
 let songIndex = 0;
+// Cargar detalles de la canción
+function loadSong(song) {
+    document.getElementById('title').innerText = song.title;
+    document.getElementById('artist').innerText = song.artist;
+    document.getElementById('audio').src = song.path;
+    document.getElementById('cover').src = song.cover;
+}
+
+// Canción Anterior
+document.getElementById('prev').addEventListener('click', () => {
+    songIndex--;
+    if (songIndex < 0) songIndex = songs.length - 1;
+    loadSong(songs[songIndex]);
+    playSong(); // Reproduce automáticamente al cambiar
+});
+
+// Siguiente Canción
+const nextSong = () => {
+    songIndex++;
+    if (songIndex > songs.length - 1) songIndex = 0;
+    loadSong(songs[songIndex]);
+    playSong();
+};
+
+document.getElementById('next').addEventListener('click', nextSong);
+
+// ¡Magia! Cuando termine la canción, que pase a la siguiente sola
+audio.addEventListener('ended', nextSong);
+
+// Cargar la primera canción al iniciar
+loadSong(songs[songIndex]);
